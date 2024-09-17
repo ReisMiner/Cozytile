@@ -18,10 +18,10 @@ Hey there!! I've been working on a Qtile rice for a while now, and I'm excited t
 
 <div align="left">
 
-## INSTALLATION  (Arch Linux)
+## INSTALLATION (Arch/Fedora)
 </div>
 
-###### Note: This installation script is specifically designed for Arch Linux users, and I can only guarantee that it will work for a freshly installed system. If you've been using a different window manager, no worries - just be sure to take a complete backup of your current dots before running the script. And if you're already using Oh My Zsh, don't forget to remove that folder from your home directory
+###### Note: This installation script is specifically designed for Arch Linux and Fedora users, and I can only guarantee that it will work for a freshly installed system. If you've been using a different window manager, no worries - just be sure to take a complete backup of your current dots before running the script. And if you're already using Oh My Zsh, don't forget to remove that folder from your home directory
 
 <details>
 <summary><h3>Automated Installation </h3></summary>
@@ -33,15 +33,12 @@ cd Cozytile
 ```
 ###### Now that you're in the cloned folder, it's time to run the script
 
-- Make the script executable
-```sh
-chmod +x install.sh
-```
+Install script tested on Fedora 40
 
 - Run the script
 
 ```sh 
-./install.sh
+./Scripts/install.sh
 ```
 
 ###### Once the script finishes its work and launches SDDM, it's time to choose Qtile from the WM selector and dive right into the Amazing world of Qtile!
