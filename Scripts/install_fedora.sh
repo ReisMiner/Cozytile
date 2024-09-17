@@ -25,12 +25,11 @@ clear
 # Install development tools and required packages
 echo "Installing dependencies.." && sleep 2
 sudo dnf groupinstall -y "Development Tools"
-sudo dnf install -y qtile python3-psutil picom dunst zsh mpd ncmpcpp playerctl brightnessctl alacritty htop flameshot thunar rofi ranger cava pulseaudio alsa-utils neovim vim feh sddm
+sudo dnf install -y qtile python3-psutil python-pip picom dunst zsh mpd ncmpcpp playerctl brightnessctl alacritty htop flameshot thunar rofi ranger cava alsa-utils neovim vim feh sddm --allowerasing
 clear
 
 # Install pywal
 echo "Installing pywal..." && sleep 1
-sudo python -m pip install pip --upgrade
 sudo pip install pywal
 clear
 
