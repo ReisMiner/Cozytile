@@ -42,7 +42,7 @@ clear
 
 # Install pfetch
 echo "Installing pfetch..." && sleep 1
-if [ ! -f usr/local/bin/pfetch ]; then
+if [ ! -f /usr/local/bin/pfetch ]; then
     git clone https://github.com/dylanaraps/pfetch.git
     sudo install pfetch/pfetch /usr/local/bin/
 else
@@ -146,7 +146,7 @@ clear
 
 # Enable SDDM
 echo "Enabling SDDM to start on boot..."
-sudo systemctl enable sddm
+sudo systemctl enable sddm || true # ignore error, if sddm is already enabled
 clear
 
 # Inform the user and prompt for automatic restart
