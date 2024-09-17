@@ -18,8 +18,9 @@ sudo dnf install -y git
 clear
 
 # Enable rpmfusion
-echo "Enabling rpm fusion..." && sleep 1
+echo "Enabling rpm fusion free & non-free..." && sleep 1
 sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 clear
 
 # Install development tools and required packages
@@ -30,13 +31,13 @@ clear
 
 # Install pywal
 echo "Installing pywal..." && sleep 1
-sudo pip install pywal
+pip install pywal
 clear
 
 # Install starship
 echo "Installing starship..." && sleep 1
-sudo dnf copr enable atim/starship
-sudo dnf install starship
+sudo dnf copr enable -y atim/starship
+sudo dnf install -y starship
 clear
 
 # Install pfetch
