@@ -20,7 +20,7 @@ clear
 # Enable rpmfusion
 echo "Enabling rpm fusion free & non-free..." && sleep 1
 sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 clear
 
 # Install development tools and required packages
@@ -42,8 +42,13 @@ clear
 
 # Install pfetch
 echo "Installing pfetch..." && sleep 1
-git clone https://github.com/dylanaraps/pfetch.git
-sudo install pfetch/pfetch /usr/local/bin/
+if [ ! -f usr/local/bin/pfetch ]; then
+    git clone https://github.com/dylanaraps/pfetch.git
+    sudo install pfetch/pfetch /usr/local/bin/
+else
+    echo "pfetch already installed, doing nothing!" && sleep 1
+fi
+
 clear
 
 # Backup and install configuration files
