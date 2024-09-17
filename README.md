@@ -26,6 +26,8 @@ Hey there!! I've been working on a Qtile rice for a while now, and I'm excited t
 <details>
 <summary><h3>Automated Installation </h3></summary>
 
+Install script tested on Fedora 40 i3 spin.
+
 - Clone the repo and cd into the cloned folder.
 ```sh
 git clone https://github.com/Darkkal44/Cozytile 
@@ -33,7 +35,10 @@ cd Cozytile
 ```
 ###### Now that you're in the cloned folder, it's time to run the script
 
-Install script tested on Fedora 40
+- Make the scripts executable
+```sh
+chmod +x ./Scripts/*
+```
 
 - Run the script
 
